@@ -1,6 +1,7 @@
+au BufNewFile,BufRead *.gradle  setf groovy
 filetype plugin indent on
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set nocompatible
+filetype off
 syntax on
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -14,6 +15,21 @@ Plugin 'ctrlpvim/ctrlp.vim'
 
 call vundle#end() 
 
+set expandtab
+set tabstop=4 shiftwidth=4 softtabstop=4
+
+nnoremap <leader>ev :e $MYVIMRC<cr>
+nnoremap <leader>eg :e ~/.gitconfig<cr>
+nnoremap <leader>rv :source $MYVIMRC<cr>
+
+vnoremap <leader>p "*p
+nnoremap <leader>p "*p
+
+vnoremap <leader>y "*y
+nnoremap <leader>y "*y
+
+set clipboard+=unnamed
+set nocompatible
 set ruler
 set cursorline
 set relativenumber
@@ -23,11 +39,10 @@ set noswapfile
 set background=dark
 colorscheme solarized
 
-map <F2> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
 
-" EasyMotion
+" " EasyMotion
 map <Leader> <Plug>(easymotion-prefix)
 map  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
-" nmap s <Plug>(easymotion-s2)
-" nmap t <Plug>(easymotion-t2)
+let g:EasyMotion_smartcase = 1

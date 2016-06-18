@@ -1,0 +1,26 @@
+[user]
+	name = Johnny Zhou
+	email = johnny.zhou@domain.com.au
+[alias]
+	a = add
+	aa = add --all
+	b = branch
+	cm = commit -m
+	d = diff
+	l = log --oneline -n 10
+	ll = log
+	p = pull
+	ss = status
+	s = status --short --branch
+	st = stash
+	stc = stash clear
+	stl = stash list
+	sts = stash save
+	stp = stash pop
+	co = checkout
+	cod = checkout develop
+	cos = checkout staging
+	com = checkout master
+	r = !sh -c 'git branch -D $1 && git push origin :$1' -
+[push]
+	default = simple
